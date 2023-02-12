@@ -14,7 +14,7 @@
 	<name>minicursoadsfg</name>
 	<description>Demonstração Mini Curso FG</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
