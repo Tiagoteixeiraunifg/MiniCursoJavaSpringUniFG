@@ -8,6 +8,9 @@
 		<version>2.6.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<properties>
+		<java.version>11</java.version>
+	</properties>
 	<groupId>com.minicursoadsfg</groupId>
 	<artifactId>minicursoadsfg</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -22,7 +25,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		
 		
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -97,6 +100,10 @@
             <artifactId>hibernate-validator-annotation-processor</artifactId>
             <version>6.0.20.Final</version>
         </dependency>
+        <dependency>
+    		<groupId>com.fasterxml.jackson.datatype</groupId>
+    		<artifactId>jackson-datatype-jdk8</artifactId>
+     	 </dependency>
 	</dependencies>
 	
 	<build>
