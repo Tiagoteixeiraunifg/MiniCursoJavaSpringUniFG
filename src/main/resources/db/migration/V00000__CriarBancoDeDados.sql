@@ -4,8 +4,8 @@
 -- -----------------------------------------------------
 -- Table Alunos
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Alunos (
-  id_Aluno INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS alunos (
+  id_aluno INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL,
   sobrenome VARCHAR(100) NULL,
   idade VARCHAR(3) NULL,
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS Alunos (
   email VARCHAR(100) NULL,
   datacadastro DATETIME NULL,
   dataatualizacao DATETIME NULL,
-  PRIMARY KEY (id_Aluno))
+  PRIMARY KEY (id_aluno))
 ENGINE = InnoDB;
 
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS biblioteca (
   PRIMARY KEY (id_biblioteca, aluno_id_aluno),
   CONSTRAINT fk_biblioteca_Alunos1
     FOREIGN KEY (aluno_id_aluno)
-    REFERENCES Alunos (id_Aluno)
+    REFERENCES alunos (id_aluno)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -43,8 +43,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table Autores
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Autores (
-  id_Autor INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS autores (
+  id_autor INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL,
   idade VARCHAR(3) NOT NULL,
   datacadastro DATETIME NULL,
@@ -56,13 +56,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table Livros
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Livros (
-  id_Livro INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS livros (
+  id_livro INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL,
   status VARCHAR(45) NOT NULL,
   datacadastro DATETIME NULL,
   dataatualizacao DATETIME NULL,
-  PRIMARY KEY (id_Livro))
+  PRIMARY KEY (id_livro))
 ENGINE = InnoDB;
 
 
@@ -74,16 +74,16 @@ CREATE TABLE IF NOT EXISTS relacionamento_livro_autor (
   rel_id_Livro INT NOT NULL,
   rel_id_Autor INT NOT NULL,
   PRIMARY KEY (id),
-  INDEX fk_RelacionamentoLivroAutor_Autores1_idx (rel_id_Autor ASC) VISIBLE,
-  INDEX fk_RelacionamentoLivroAutor_Livros1_idx (rel_id_Livro ASC) VISIBLE,
+  INDEX fk_RelacionamentoLivroAutor_Autores1_idx (rel_id_autor ASC) VISIBLE,
+  INDEX fk_RelacionamentoLivroAutor_Livros1_idx (rel_id_livro ASC) VISIBLE,
   CONSTRAINT fk_RelacionamentoLivroAutor_Autores1
-    FOREIGN KEY (rel_id_Autor)
-    REFERENCES Autores (id_Autor)
+    FOREIGN KEY (rel_id_autor)
+    REFERENCES autores (id_autor)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_RelacionamentoLivroAutor_Livros1
-    FOREIGN KEY (rel_id_Livro)
-    REFERENCES Livros (id_Livro)
+    FOREIGN KEY (rel_id_livro)
+    REFERENCES livros (id_livro)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -94,7 +94,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS relacionamento_biblioteca_livro (
   id INT NOT NULL AUTO_INCREMENT,
-  rel_Id_Livro INT NULL,
-  rel_id_Biblioteca INT NOT NULL,
+  rel_Id_livro INT NULL,
+  rel_id_biblioteca INT NOT NULL,
   PRIMARY KEY (id))
 ENGINE = InnoDB;
