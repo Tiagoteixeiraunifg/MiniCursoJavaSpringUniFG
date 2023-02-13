@@ -41,10 +41,6 @@ public class BibliotecaDTO {
 	private String status;
 	
 	
-	private LocalDateTime dataretirada;
-		
-
-	@NotNull(message = "O campo datadevolucao não pode ser nulo")
 	private LocalDateTime datadevolucao;
 	
 
@@ -52,6 +48,7 @@ public class BibliotecaDTO {
 	private LocalDateTime datareservainicio;
 	
 	
+	@NotNull(message = "O campo datareservafim não pode ser nulo")
 	private LocalDateTime datareservafim;
 
 

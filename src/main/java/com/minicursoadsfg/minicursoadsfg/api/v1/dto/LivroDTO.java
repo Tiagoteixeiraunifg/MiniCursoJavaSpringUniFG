@@ -23,23 +23,21 @@ import lombok.Setter;
 public class LivroDTO {
 	
 	@NotNull(groups = ValidacoesEmGrupo.id_livro.class)
-	Integer id_livro;
+	private Integer id_livro;
 	
 	@NotBlank(message = "O campo nome não pode está em branco")
 	@NotNull(message = "O campo nome não pode ser nulo")
-	String nome;
+	private String nome;
 	
 	@Enumerated(EnumType.STRING)
 	@NotNull(message = "O campo status não pode ser nulo")
-	LivroStatusEnum status;
+	private LivroStatusEnum status;
 		
 	@NotNull(message = "O autor tem de ser informado")
-	Set<AutorDTO> autor;
+	private Set<AutorDTO> autor;
 	
 	
-	LocalDateTime datacadastro;
-	
-	LocalDateTime dataatualizacao;
+
 	
 	
 	public LivroModelo convertaDtoParaModelo() {

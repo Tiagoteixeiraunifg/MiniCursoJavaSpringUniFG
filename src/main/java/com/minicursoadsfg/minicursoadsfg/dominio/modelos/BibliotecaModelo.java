@@ -82,6 +82,7 @@ public class BibliotecaModelo {
 	
 	public BibliotecaModelo preparaCadastroNovo() {
 		status = BibliotecaEnumerador.ABERTA;
+		dataretirada = LocalDateTime.now();
 		datacadastro = LocalDateTime.now();
 		dataatualizacao = LocalDateTime.now();
 		return this;
