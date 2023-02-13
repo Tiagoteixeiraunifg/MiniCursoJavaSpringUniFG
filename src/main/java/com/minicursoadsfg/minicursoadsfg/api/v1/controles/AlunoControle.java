@@ -57,12 +57,13 @@ public class AlunoControle {
 	 * @param alunoDTO
 	 * @param resultado
 	 * @return
+	 * @throws NaoEncontradoExcepition 
 	 */
 	@CrossOrigin(origins = "${front.baseurl}")
 	@ApiOperation(value = "Cadastra um novo aluno.")
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public ResponseEntity<Resposta<AlunoDTO>> cadastreAluno(@Valid @RequestBody AlunoDTO alunoDTO, BindingResult resultado){
+	public ResponseEntity<Resposta<AlunoDTO>> cadastreAluno(@Valid @RequestBody AlunoDTO alunoDTO, BindingResult resultado) throws NaoEncontradoExcepition{
 		
 		MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
 		Resposta<AlunoDTO> resposta = new Resposta<>();
@@ -72,6 +73,10 @@ public class AlunoControle {
 		if (resultado.hasErrors()) {
 			resultado.getAllErrors().stream().forEach(error -> resposta.adicionarMensagenErroNaListaResposta(error.getDefaultMessage()));
 			return ResponseEntity.badRequest().body(resposta);
+		}
+		
+		if(_alunoServico.findByEmail(alunoDTO.getEmail()).isPresent()) {
+			throw new NaoEncontradoExcepition("Aluno ja cadastrado com a ID informada!");
 		}
 		
 		var convertidoEmModelo = alunoDTO.convertaDtoParaModelo();
@@ -154,7 +159,7 @@ public class AlunoControle {
 		headers.add("RELEASE_DATA_API", _utilApi.RELEASE_VERSION());
 		
 		if (!_alunoServico.findById(id_aluno).isPresent()) {
-			throw new NaoEncontradoExcepition("Aluno nao encontrado con a ID informada!");
+			throw new NaoEncontradoExcepition("Aluno nao encontrado com a ID informada!");
 		}
 		
 		_alunoServico.deleteById(id_aluno);

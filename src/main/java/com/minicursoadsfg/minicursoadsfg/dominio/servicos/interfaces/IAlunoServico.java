@@ -17,5 +17,7 @@ public interface IAlunoServico {
 	public Optional<AlunoModelo> findById(Integer id_aluno);
 	
 	public void deleteById(Integer id_aluno);
+	
+	public Optional<AlunoModelo> findByEmail(String email);
 
 }

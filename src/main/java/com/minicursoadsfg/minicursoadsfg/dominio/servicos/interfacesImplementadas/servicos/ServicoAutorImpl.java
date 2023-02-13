@@ -5,9 +5,7 @@ package com.minicursoadsfg.minicursoadsfg.dominio.servicos.interfacesImplementad
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Component;
-
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.AutorModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.repositorio.AutorRepositorio;
 import com.minicursoadsfg.minicursoadsfg.dominio.servicos.interfaces.IAutorServico;
@@ -44,5 +42,6 @@ public class ServicoAutorImpl implements IAutorServico {
 	public void deleteById(Integer id_autor) {
 		_AutorRepositorio.deleteById(id_autor);
 	}
+
 
 }

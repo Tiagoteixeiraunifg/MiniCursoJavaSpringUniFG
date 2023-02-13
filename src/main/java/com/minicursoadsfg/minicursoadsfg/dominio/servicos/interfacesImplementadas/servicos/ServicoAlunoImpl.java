@@ -46,4 +46,9 @@ public class ServicoAlunoImpl implements IAlunoServico {
 		_alunoRepositorio.deleteById(id_aluno);
 	}
 
+	@Override
+	public Optional<AlunoModelo> findByEmail(String email) {
+		return _alunoRepositorio.findByEmail(email);
+	}
+
 }

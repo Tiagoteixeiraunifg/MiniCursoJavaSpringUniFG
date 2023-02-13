@@ -12,4 +12,6 @@ public interface AlunoRepositorio extends JpaRepository<AlunoModelo, Integer> {
 	
 	Optional<AlunoModelo> findById(Integer id);
 	
+	Optional<AlunoModelo> findByEmail(String email);
+	
 }
