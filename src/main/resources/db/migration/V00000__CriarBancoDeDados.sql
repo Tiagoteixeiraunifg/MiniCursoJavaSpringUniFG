@@ -94,17 +94,5 @@ CREATE TABLE IF NOT EXISTS relacionamento_biblioteca_livro (
   id INT NOT NULL AUTO_INCREMENT,
   rel_Id_Livro INT NULL,
   rel_id_Biblioteca INT NOT NULL,
-  PRIMARY KEY (id),
-  INDEX fk_relacionamento_biblioteca_livro_biblioteca1_idx (rel_id_Biblioteca ASC) VISIBLE,
-  INDEX fk_relacionamento_biblioteca_livro_Livros1_idx (rel_Id_Livro ASC) VISIBLE,
-  CONSTRAINT fk_relacionamento_biblioteca_livro_biblioteca1
-    FOREIGN KEY (rel_id_Biblioteca)
-    REFERENCES biblioteca (id_biblioteca)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT fk_relacionamento_biblioteca_livro_Livros1
-    FOREIGN KEY (rel_Id_Livro)
-    REFERENCES Livros (id_Livro)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (id)
 ENGINE = InnoDB;
