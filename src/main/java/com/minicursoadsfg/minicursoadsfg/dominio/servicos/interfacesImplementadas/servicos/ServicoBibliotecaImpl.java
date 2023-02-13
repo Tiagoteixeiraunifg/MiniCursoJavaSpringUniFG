@@ -4,12 +4,9 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
-
+import com.minicursoadsfg.minicursoadsfg.api.respostas.Resposta;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.AlunoModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.BibliotecaModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.LivroModelo;
@@ -62,15 +59,15 @@ public class ServicoBibliotecaImpl implements IBibliotecaServico {
 
 
 	@Override
-	public MultiValueMap<String, String> validaReserva(BibliotecaModelo biblioteca) {
-		MultiValueMap<String, String> resultado = new LinkedMultiValueMap<>();
+	public Resposta<Void> validaReserva(BibliotecaModelo biblioteca) {
 		
+		Resposta<Void> resposta = new Resposta<>();
 		/*Validando se existe Aluno*/
-		
 		if(biblioteca.getAluno().estahPresente()) {
-			resultado.add("ALUNO", "ALUNO NÃO INSERIDO");
+			resposta.adicionarMensagenErroNaListaResposta("Campo aluno não foi inserido");
 		}
-		return resultado;
+		
+		return resposta;
 	}
 
 	@Override

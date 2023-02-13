@@ -1,7 +1,6 @@
 package com.minicursoadsfg.minicursoadsfg.dominio.servicos.interfacesImplementadas.validacoes;
 import org.springframework.stereotype.Component;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
+import com.minicursoadsfg.minicursoadsfg.api.respostas.Resposta;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.BibliotecaModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.servicos.validacoes.IBibliotecaValidacoes;
 
@@ -9,15 +8,18 @@ import com.minicursoadsfg.minicursoadsfg.dominio.servicos.validacoes.IBiblioteca
 @Component
 public class BibliotecaValidacoesImpl implements IBibliotecaValidacoes{
 
+	
+
 	@Override
-	public MultiValueMap<String, String> validaReserva(BibliotecaModelo biblioteca) {
-		MultiValueMap<String, String> resultado = new LinkedMultiValueMap<>();
+	public Resposta<Void> validaReserva(BibliotecaModelo biblioteca) {
 		
+		Resposta<Void> resposta = new Resposta<>();
 		/*Validando se existe Aluno*/
 		if(biblioteca.getAluno().estahPresente()) {
-			resultado.add("ALUNO", "ALUNO NÃO INSERIDO");
+			resposta.adicionarMensagenErroNaListaResposta("Campo aluno não foi inserido");
 		}
-		return resultado;
+		
+		return resposta;
 	}
 
 
