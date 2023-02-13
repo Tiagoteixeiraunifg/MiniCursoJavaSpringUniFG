@@ -96,5 +96,5 @@ CREATE TABLE IF NOT EXISTS relacionamento_biblioteca_livro (
   id INT NOT NULL AUTO_INCREMENT,
   rel_Id_Livro INT NULL,
   rel_id_Biblioteca INT NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id))
 ENGINE = InnoDB;
