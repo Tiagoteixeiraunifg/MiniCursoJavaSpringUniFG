@@ -32,7 +32,7 @@ public Docket productApi() {
 
 private ApiInfo metaData() {
 		return new ApiInfoBuilder().title("Spring Boot REST API")
-				.description("\"Spring Boot REST API MiniCurso UniFG\"")
+				.description("\"Spring Boot REST API MiniCurso UniFG\" \n\n"+"\"Acesso o repositório no GitHub\"\n\n"+"Acesse pelo link: https://github.com/Tiagoteixeiraunifg/MiniCursoJavaSpringUniFG")
 				.version("2.0.0").license("Licença Apache Versão 2.0")
 				.licenseUrl("https://www.apache.org/licenses/LICENSE-2.0/")
 				.build();
