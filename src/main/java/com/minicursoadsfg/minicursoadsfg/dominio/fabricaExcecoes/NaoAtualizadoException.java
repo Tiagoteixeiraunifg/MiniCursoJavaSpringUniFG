@@ -1,4 +1,4 @@
-package com.minicursoadsfg.minicursoadsfg.dominio.FabricaExcecoes;
+package com.minicursoadsfg.minicursoadsfg.dominio.fabricaExcecoes;
 
 public class NaoAtualizadoException extends Exception {
 

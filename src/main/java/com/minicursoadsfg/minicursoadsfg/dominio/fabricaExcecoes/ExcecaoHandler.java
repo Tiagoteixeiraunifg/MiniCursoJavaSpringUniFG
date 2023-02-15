@@ -1,4 +1,4 @@
-package com.minicursoadsfg.minicursoadsfg.dominio.FabricaExcecoes;
+package com.minicursoadsfg.minicursoadsfg.dominio.fabricaExcecoes;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

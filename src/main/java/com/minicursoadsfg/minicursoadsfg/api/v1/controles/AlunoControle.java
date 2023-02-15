@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiOperation;
 import com.minicursoadsfg.minicursoadsfg.api.respostas.Resposta;
 import com.minicursoadsfg.minicursoadsfg.api.v1.dto.AlunoDTO;
 import com.minicursoadsfg.minicursoadsfg.comum.UtilApi;
-import com.minicursoadsfg.minicursoadsfg.dominio.FabricaExcecoes.NaoEncontradoExcepition;
+import com.minicursoadsfg.minicursoadsfg.dominio.fabricaExcecoes.NaoEncontradoExcepition;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.AlunoModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.servicos.interfaces.IAlunoServico;
 

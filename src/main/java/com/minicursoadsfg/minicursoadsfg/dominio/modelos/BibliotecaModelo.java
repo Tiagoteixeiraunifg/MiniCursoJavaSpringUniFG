@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import com.minicursoadsfg.minicursoadsfg.api.v1.dto.BibliotecaDTO;
-import com.minicursoadsfg.minicursoadsfg.dominio.modelos.Enumeradores.BibliotecaEnumerador;
+import com.minicursoadsfg.minicursoadsfg.dominio.modelos.enumeradores.BibliotecaEnumerador;
+
 import javax.persistence.Column;
 import javax.persistence.*;
 import javax.persistence.OneToOne;

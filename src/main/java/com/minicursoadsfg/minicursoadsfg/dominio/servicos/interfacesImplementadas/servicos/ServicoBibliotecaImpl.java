@@ -10,7 +10,7 @@ import com.minicursoadsfg.minicursoadsfg.api.respostas.Resposta;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.AlunoModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.BibliotecaModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.LivroModelo;
-import com.minicursoadsfg.minicursoadsfg.dominio.modelos.Enumeradores.BibliotecaEnumerador;
+import com.minicursoadsfg.minicursoadsfg.dominio.modelos.enumeradores.BibliotecaEnumerador;
 import com.minicursoadsfg.minicursoadsfg.dominio.repositorio.AlunoRepositorio;
 import com.minicursoadsfg.minicursoadsfg.dominio.repositorio.BibliotecaRepositorio;
 import com.minicursoadsfg.minicursoadsfg.dominio.repositorio.LivroRepositorio;

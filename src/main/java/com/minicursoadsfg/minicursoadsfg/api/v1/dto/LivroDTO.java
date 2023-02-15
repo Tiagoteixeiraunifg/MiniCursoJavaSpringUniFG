@@ -9,7 +9,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import org.modelmapper.ModelMapper;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.LivroModelo;
-import com.minicursoadsfg.minicursoadsfg.dominio.modelos.Enumeradores.LivroStatusEnum;
+import com.minicursoadsfg.minicursoadsfg.dominio.modelos.enumeradores.LivroStatusEnum;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

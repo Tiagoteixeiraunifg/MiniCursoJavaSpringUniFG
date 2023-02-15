@@ -7,7 +7,8 @@ import org.modelmapper.ModelMapper;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.minicursoadsfg.minicursoadsfg.api.v1.dto.LivroDTO;
-import com.minicursoadsfg.minicursoadsfg.dominio.modelos.Enumeradores.LivroStatusEnum;
+import com.minicursoadsfg.minicursoadsfg.dominio.modelos.enumeradores.LivroStatusEnum;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;

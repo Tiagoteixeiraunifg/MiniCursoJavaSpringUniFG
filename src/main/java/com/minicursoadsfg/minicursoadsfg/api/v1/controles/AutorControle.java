@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.minicursoadsfg.minicursoadsfg.api.respostas.Resposta;
 import com.minicursoadsfg.minicursoadsfg.api.v1.dto.AutorDTO;
 import com.minicursoadsfg.minicursoadsfg.comum.UtilApi;
-import com.minicursoadsfg.minicursoadsfg.dominio.FabricaExcecoes.NaoAtualizadoException;
+import com.minicursoadsfg.minicursoadsfg.dominio.fabricaExcecoes.NaoAtualizadoException;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.AutorModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.servicos.interfaces.IAutorServico;
 import io.swagger.annotations.Api;

@@ -1,4 +1,4 @@
-package com.minicursoadsfg.minicursoadsfg.dominio.modelos.Enumeradores;
+package com.minicursoadsfg.minicursoadsfg.dominio.modelos.enumeradores;
 
 
 

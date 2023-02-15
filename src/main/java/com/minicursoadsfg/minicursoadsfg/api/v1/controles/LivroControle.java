@@ -27,7 +27,7 @@ import com.minicursoadsfg.minicursoadsfg.api.respostas.Resposta;
 import com.minicursoadsfg.minicursoadsfg.api.v1.dto.AutorDTO;
 import com.minicursoadsfg.minicursoadsfg.api.v1.dto.LivroDTO;
 import com.minicursoadsfg.minicursoadsfg.comum.UtilApi;
-import com.minicursoadsfg.minicursoadsfg.dominio.FabricaExcecoes.NaoEncontradoExcepition;
+import com.minicursoadsfg.minicursoadsfg.dominio.fabricaExcecoes.NaoEncontradoExcepition;
 import com.minicursoadsfg.minicursoadsfg.dominio.modelos.LivroModelo;
 import com.minicursoadsfg.minicursoadsfg.dominio.servicos.interfaces.IAutorServico;
 import com.minicursoadsfg.minicursoadsfg.dominio.servicos.interfaces.ILivroServico;
